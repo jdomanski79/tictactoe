@@ -1,5 +1,3 @@
-import java.util.InputMismatchException;
-import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 public class HumanPlayer extends Player {
@@ -12,22 +10,19 @@ public class HumanPlayer extends Player {
 	
 	@Override
 	public void move() {
-		Integer move =  null;
+		int move =  -1;
 		
 		System.out.println("Ruszaj!");
 		
-		while (move == null) {
+		while (!board.isLegal(move)) {
 			try {
 				move = Integer.valueOf(input.nextLine());
-				
-				if (move < 0 || move > 8) 
-					move = null;
 				
 			} catch( NumberFormatException e) {
 				//move = null;
 			}
 			
-			if (move == null ) {
+			if (!board.isLegal(move) ) {
 				System.out.println("Podaj liczbê od 0 - 8");
 			}
 			
