@@ -23,7 +23,7 @@ public class HumanPlayer extends Player {
 			}
 			
 			if (!board.isLegal(move) ) {
-				System.out.println("Podaj liczbê od 0 - 8");
+				System.out.println("Podaj w³aœciwy numer");
 			}
 			
 		}

@@ -5,6 +5,10 @@ public class Board {
 	private int[] grid = new int[9];
 	private Set<Integer> possibleMoves = new HashSet<>(); 
 	
+	public Set<Integer> getPossibleMoves() {
+		return possibleMoves;
+	}
+
 	public Board(){
 		reset();
 	}

@@ -1,7 +1,16 @@
 public abstract class Player {
-	protected String name;
+	private String name;
 	protected String mark;
 	protected Board board;
+	
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
 	
 	
 	Player(String name, String mark, Board board){
