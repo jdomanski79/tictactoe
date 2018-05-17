@@ -1,8 +1,9 @@
+package pl.jdomanski.tictactoe;
 import java.util.Random;
 
 public class RandomComputerPlayer extends Player {
 
-	RandomComputerPlayer(String name, String mark, Board board) {
+	public RandomComputerPlayer(String name, String mark, Board board) {
 		super(name, mark, board);
 	}
 

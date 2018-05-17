@@ -1,3 +1,5 @@
+package pl.jdomanski.tictactoe;
+
 import java.util.*;
 
 public class App {
@@ -10,26 +12,31 @@ public class App {
 	
 	public static void main(String[] args) {
 		Board board = new Board();
-		Player player1 = new HumanPlayer("jarek", "x", board);
-		Player player2 = new RandomComputerPlayer("FDFD", "o", board);
+		Players players = new Players(
+				new HumanPlayer("jarek", "x", board),
+				new RandomComputerPlayer("FDFD", "o", board));
+		Player currentPlayer = null;
 		
-		System.out.println("Witaj " + player1.getName() + "! Zagrajmy!");
+		
+		System.out.println("Witaj! Zagrajmy!");
 		
 		do {
 			clearScreen();
 			System.out.println(board.toString());
 			
 			do {
-				if (board.hasNextMove())
-					player1.move();
+				// get current player
+				currentPlayer = players.nextPlayer();
 				
+				//display current player name
+				System.out.println("Teraz kolej gracza " + currentPlayer.getName());
+				
+				// player move
+				currentPlayer.move();
+				
+				//display board
 				System.out.println(board.toString());
-				
-				if (board.hasNextMove())
-					player2.move();
-				
-				System.out.println(board.toString());
-					
+
 			} while (board.hasNextMove());
 			
 			

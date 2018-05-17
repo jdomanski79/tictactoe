@@ -1,7 +1,9 @@
+package pl.jdomanski.tictactoe;
+
 public abstract class Player {
 	private String name;
-	protected String mark;
-	protected Board board;
+	String mark;
+	Board board;
 	
 	public String getName() {
 		return name;

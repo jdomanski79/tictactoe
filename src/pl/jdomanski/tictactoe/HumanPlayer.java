@@ -1,9 +1,10 @@
+package pl.jdomanski.tictactoe;
 import java.util.Scanner;
 
 public class HumanPlayer extends Player {
 	private Scanner input = new Scanner(System.in);
 	
-	HumanPlayer( String name, String mark, Board board){
+	public HumanPlayer( String name, String mark, Board board){
 		super(name, mark, board);
 		
 	}
