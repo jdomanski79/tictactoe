@@ -2,7 +2,7 @@ package pl.jdomanski.tictactoe;
 
 public abstract class Player {
 	private String name;
-	String mark;
+	char marker;
 	Board board;
 	
 	public String getName() {
@@ -13,12 +13,18 @@ public abstract class Player {
 		this.name = name;
 	}
 
-	
-	
-	Player(String name, String mark, Board board){
+		Player(String name, char marker, Board board){
 		this.name = name;
-		this.mark = mark;
+		this.marker = marker;
 		this.board = board;
+	}
+	
+	public char getMarker() {
+		return marker;
+	}
+
+	public void setMarker (char marker) {
+		this.marker = marker;
 	}
 	
 	public abstract void move();
@@ -28,5 +34,7 @@ public abstract class Player {
 	 * @param int move
 	 * @return boolean
 	 */
+
+	
 	
 }

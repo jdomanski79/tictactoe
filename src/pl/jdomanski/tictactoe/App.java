@@ -22,7 +22,7 @@ public class App {
 		
 		do {
 			clearScreen();
-			System.out.println(board.toString());
+			board.printBoard();
 			
 			do {
 				// get current player
@@ -32,10 +32,10 @@ public class App {
 				System.out.println("Teraz kolej gracza " + currentPlayer.getName());
 				
 				// player move
-				currentPlayer.move();
+				board.submitMove(move, currentPlayer.getMarker());
 				
 				//display board
-				System.out.println(board.toString());
+				board.printBoard();
 
 			} while (board.hasNextMove());
 			

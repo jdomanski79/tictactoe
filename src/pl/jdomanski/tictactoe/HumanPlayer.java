@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class HumanPlayer extends Player {
 	private Scanner input = new Scanner(System.in);
 	
-	public HumanPlayer( String name, String mark, Board board){
+	public HumanPlayer( String name, char mark, Board board){
 		super(name, mark, board);
 		
 	}
